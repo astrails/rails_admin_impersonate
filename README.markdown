@@ -1,6 +1,6 @@
 ## RailsAdminImpersonate
 
-Add an ability to rails_admin to impersonate as any user or actually any member
+Add an ability to [rails_admin](https://github.com/sferik/rails_admin) to impersonate as any user or actually any member
 that is devise authenticatable.
 
 Installation: just add to your Gemfile.

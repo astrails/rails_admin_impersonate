@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = RailsAdminImpersonate::VERSION
   s.authors     = ["Boris Nadion"]
   s.email       = ["boris@astrails.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/astrails/rails_admin_impersonate"
   s.summary     = "Impersonate as a Devise user for rails_admin"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
