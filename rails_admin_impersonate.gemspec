@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/astrails/rails_admin_impersonate"
   s.summary     = "Impersonate as a Devise user for rails_admin"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
 
   s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency "rails_admin", "~> 0.4.9"
