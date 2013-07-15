@@ -1,0 +1,6 @@
+en:
+  admin:
+    actions:
+      impersonate:
+        menu: "Impersonate"
+
