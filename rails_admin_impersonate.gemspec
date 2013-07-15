@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Impersonate as a Devise user for rails_admin"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
+  s.license = 'MIT'
 
   s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency "rails_admin", "~> 0.4.9"
