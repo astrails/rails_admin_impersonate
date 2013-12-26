@@ -1,5 +1,6 @@
 # 0.0.5
   - repackage gem with bundler
+  - disable impersonation for Admin model
 
 # 0.0.4
   - relax rails dependency to support rails 4

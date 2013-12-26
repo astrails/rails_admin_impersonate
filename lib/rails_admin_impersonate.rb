@@ -5,7 +5,8 @@ module RailsAdmin
     module Actions
       class Impersonate < RailsAdmin::Config::Actions::Base
         register_instance_option :visible? do
-          authorized? && bindings[:object].respond_to?(:devise_modules)
+          ('Admin' != bindings[:abstract_model].model_name) &&
+            authorized? && bindings[:object].respond_to?(:devise_modules)
         end
 
         register_instance_option :member? do

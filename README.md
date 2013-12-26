@@ -39,6 +39,17 @@ Now restart the application and visit User table in the admin.
 
 You should see home icon and Impersonate link for every model that uses Devise.
 
+Note: by default impersonation is disabled for model `Admin`. If you want to
+disable it for some other model you can modify the above code like this:
+
+    config.actions do
+      ...
+      impersonate do
+        authorized do
+          'ModelName' != bindings[:abstract_model].model_name
+        end
+      end
+
 ## Contributing
 
 1. Fork it
