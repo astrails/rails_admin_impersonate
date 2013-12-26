@@ -1,20 +1,25 @@
-$:.push File.expand_path("../lib", __FILE__)
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'rails_admin_impersonate/version'
 
-# Maintain your gem's version:
-require "rails_admin_impersonate/version"
+Gem::Specification.new do |spec|
+  spec.name          = "rails_admin_impersonate"
+  spec.version       = RailsAdminImpersonate::VERSION
+  spec.authors       = ["Boris Nadion"]
+  spec.email         = ["boris@astrails.com"]
+  spec.summary       = "Impersonate as a Devise user for rails_admin"
+  spec.description   = "Impersonate as a Devise user for rails_admin"
+  spec.homepage      = "https://github.com/astrails/rails_admin_impersonate"
+  spec.license       = "MIT"
 
-# Describe your gem and declare its dependencies:
-Gem::Specification.new do |s|
-  s.name        = "rails_admin_impersonate"
-  s.version     = RailsAdminImpersonate::VERSION
-  s.authors     = ["Boris Nadion"]
-  s.email       = ["boris@astrails.com"]
-  s.homepage    = "https://github.com/astrails/rails_admin_impersonate"
-  s.summary     = "Impersonate as a Devise user for rails_admin"
+  spec.files         = `git ls-files`.split($/)
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
-  s.license = 'MIT'
-
-  s.add_dependency "rails", ">= 3.2.13"
-  s.add_dependency "rails_admin"
+  spec.add_dependency "rails", ">= 3.2.13"
+  spec.add_dependency "rails_admin"
+  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "rake"
 end

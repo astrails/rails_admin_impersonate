@@ -1,14 +1,12 @@
-require "rails_admin_impersonate/engine"
-
-module RailsAdminImpersonate
-end
+require "rails_admin_impersonate/version"
 
 module RailsAdmin
   module Config
     module Actions
       class Impersonate < RailsAdmin::Config::Actions::Base
         register_instance_option :visible? do
-          authorized? && bindings[:object].respond_to?(:devise_modules)
+          ('Admin' != bindings[:abstract_model].model_name) &&
+            authorized? && bindings[:object].respond_to?(:devise_modules)
         end
 
         register_instance_option :member? do
@@ -39,3 +37,5 @@ module RailsAdmin
     end
   end
 end
+
+I18n.load_path += Dir.glob(File.expand_path("../../config/locales/*.{rb,yml}", __FILE__))
