@@ -1,2 +1,5 @@
+# 0.0.5
+  - repackage gem with bundler
+
 # 0.0.4
   - relax rails dependency to support rails 4

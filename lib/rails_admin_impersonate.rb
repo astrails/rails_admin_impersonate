@@ -1,7 +1,4 @@
-require "rails_admin_impersonate/engine"
-
-module RailsAdminImpersonate
-end
+require "rails_admin_impersonate/version"
 
 module RailsAdmin
   module Config
@@ -39,3 +36,5 @@ module RailsAdmin
     end
   end
 end
+
+I18n.load_path += Dir.glob(File.expand_path("../../config/locales/*.{rb,yml}", __FILE__))
